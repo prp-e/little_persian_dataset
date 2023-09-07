@@ -11,14 +11,11 @@ input_data = pd.read_csv('tasnim.csv')
 input_data_list = []
 
 for row in input_data.iterrows():
-    input_data_list.append(row[1]['body'])
+    datum = row[1]['body']
+    datum = str(datum)
+    input_data_list.append(datum)
 
-input_data_strs = []
-
-for row in input_data_list:
-    input_data_strs.append(str(row))
-
-resulting_text = '\n'.join(input_data_strs)
+resulting_text = '\n'.join(input_data_list)
 
 raw_file = open(raw_file_name, 'w', encoding='utf-8')
 raw_file.write(resulting_text)
