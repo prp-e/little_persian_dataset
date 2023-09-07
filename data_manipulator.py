@@ -44,3 +44,9 @@ train_file.write(train_split)
 train_file.close()
 
 print("Training data has been written successfully.")
+
+val_file = open(val_file_name, 'w', encoding='utf-8')
+val_file.write(val_split)
+val_file.close()
+
+print("Validation data has been written successfully.")
