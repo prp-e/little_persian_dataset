@@ -1,0 +1,1 @@
+# Little Persian Dataset (Tasnim)
