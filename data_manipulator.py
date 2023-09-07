@@ -13,8 +13,12 @@ input_data_list = []
 for row in input_data.iterrows():
     input_data_list.append(row[1]['body'])
 
+input_data_strs = []
 
-resulting_text = ' '.join(input_data_list)
+for row in input_data_list:
+    input_data_strs.append(str(row))
+
+resulting_text = ''.join(input_data_list)
 
 raw_file = open(raw_file_name, 'w', encoding='utf-8')
 raw_file.write(resulting_text)
