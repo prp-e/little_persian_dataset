@@ -22,3 +22,14 @@ raw_file.write(resulting_text)
 raw_file.close()
 
 print("Raw data has been written successfully.")
+
+vocab = set(resulting_text)
+
+vocab_file = open(vocab_file_name, 'w', encoding='utf-8')
+
+for c in vocab:
+    vocab_file.write(c + '\n')
+
+vocab_file.close()
+
+print("Vocab context window has been written successfully.")
