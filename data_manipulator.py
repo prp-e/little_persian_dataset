@@ -33,3 +33,14 @@ for c in vocab:
 vocab_file.close()
 
 print("Vocab context window has been written successfully.")
+
+split_index = int(0.9 * len(resulting_text))
+
+train_split = resulting_text[:split_index]
+val_split = resulting_text[split_index:]
+
+train_file = open(train_file_name, 'w', encoding='utf-8')
+train_file.write(train_split)
+train_file.close()
+
+print("Training data has been written successfully.")
